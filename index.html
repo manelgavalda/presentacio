@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -25,12 +25,83 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<title>Slide 1</title>
+					<h1>Presentació Manel Gavaldà</h1>
+				</section>
+				<section>
 					<ul>
-						<li class="fragment">Hola</li>
-						<li class="fragment">soc</li>
+						<li class="fragment">Hola,</li>
+						<li class="fragment">sóc</li>
 						<li class="fragment">Manel</li>
+						<li class="fragment">I això és una prova dels fragments.
+							<ul>
+								<li class="fragment">Amb una llista anidada també</li>
+								<li class="fragment">I res més</li>
+							</ul>
+						</li>
+						<li class="fragment">I més avant tenim uns exemples amb el reveal js.</li>
+
+				</section>
+				<section>
+					<h3>Enllaços personals:</h3>
+					<ul>
+						<li> <a href="https://github.com/manelgavalda">Github</a></li>
+						<li> <a href="http://acacha.org/mediawiki/Usuari:Manelgavalda">Acacha</a></li>
 					</ul>
+				</section>
+				<section>
+					<h3>Exemple de cutre-taula</h3>
+					<table>
+						<tr>
+							<th>Nom</th>
+							<th>Cognom</th>
+							<th>Edat</th>
+						</tr>
+						<tr>
+							<td>Manel</td>
+							<td>Gavaldà Andreu</td>
+							<td>20</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<section>
+						<h3>Algo de codi imatges i gifs amb subnivells.</h3>
+						<img data-src="images/elephpant.jpg">
+						<br>
+						Apretar fletxa per baixar.
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="17" height="23" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-markdown>
+						<h3>Codi insertat sobre connectar-se a un socket amb PHP</h3>
+```
+//Connexió a la BD phpmon i nom de la taula.
+$config = parse_ini_file("/var/www/phpmon.com/recursos/config.ini");
+$conn=(connectar($config));
+$taula = "paquet";
+/*
+	Funcions.
+*/
+function connectar($config)
+{
+	$conn = mysqli_connect("127.0.0.1", $config['username'], $config['password'], $config['dbname']);
+	if (!$conn) {
+		echo "Error " . mysqli_connect_errno() . ": " . mysqli_connect_error();
+		exit;
+	}
+	return $conn;
+}
+```
+					</section>
+						<section data-background="images/terminator.gif">
+							<h3>I per últim també podem afegir un gif al background de la pàgina.</h3>
+					</section>
+				</section>
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h3>Com és pot veure també és pot canviar el color de fons i afegir transicions</h3>
+					<h1>Fi</h1>
 				</section>
 			</div>
 		</div>
